@@ -1,36 +1,49 @@
 {
-  "name": "nextjs-web3-template",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@ethersproject/bignumber": "^5.4.0",
-    "@ethersproject/contracts": "^5.4.0",
-    "@ethersproject/providers": "^5.4.0",
-    "@web3-react/core": "^6.1.9",
-    "@web3-react/injected-connector": "^6.0.7",
-    "@web3modal/ethers": "^4.0.0",
-    "@web3modal/wagmi": "^4.0.0",
-    "ethers": "^6.10.0",
-    "next": "14.1.0",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
-    "styled-components": "^5.3.1",
-    "viem": "2.7.6",
-    "web3": "^4.4.0",
-    "web3modal": "^1.9.7"
-  },
-  "devDependencies": {
-    "@types/node": "17.0.35",
-    "@types/react": "18.0.9",
-    "@types/react-dom": "18.0.5",
-    "eslint": "8.16.0",
-    "eslint-config-next": "12.1.6",
-    "typescript": "4.7.2"
-  }
+	"name": "nextjs-web3-template",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "yarn lint:code && yarn lint:formatting",
+		"lint:fix": "yarn lint:code:fix && yarn lint:formatting:fix",
+		"lint:code": "next lint",
+		"lint:code:fix": "next lint --fix",
+		"lint:formatting": "prettier . --check",
+		"lint:formatting:fix": "prettier . --write --log-level=silent",
+		"postinstall": "husky install"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.11.1",
+		"@emotion/styled": "^11.11.0",
+		"@fontsource/roboto": "^5.0.8",
+		"@mui/icons-material": "^5.14.8",
+		"@mui/material": "^5.14.8",
+		"@types/node": "20.5.9",
+		"@types/react": "18.2.21",
+		"@types/react-dom": "18.2.7",
+		"@web3modal/wagmi": "^3.1.0",
+		"eslint": "8.48.0",
+		"eslint-config-next": "13.4.19",
+		"next": "13.4.19",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"typescript": "5.2.2",
+		"viem": "^1.10.4",
+		"wagmi": "^1.4.1"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.7.1",
+		"@commitlint/config-conventional": "^17.7.0",
+		"@typescript-eslint/eslint-plugin": "^6.6.0",
+		"@typescript-eslint/parser": "^6.6.0",
+		"altheajs-prettier-config": "^1.3.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-import": "^2.28.1",
+		"eslint-plugin-prettier": "^5.0.0",
+		"eslint-plugin-simple-import-sort": "^10.0.0",
+		"husky": "^8.0.0",
+		"prettier": "^3.0.3"
+	}
 }
