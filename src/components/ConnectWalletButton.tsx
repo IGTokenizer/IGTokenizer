@@ -28,7 +28,9 @@ const ConnectWalletButton = (): JSX.Element => {
 				color="primary"
 				size="small"
 				sx={styles.button}
-				onClick={() => addTextAndOverlay('background.jpg', '0xE23131232423424234H32H4D32', 'C5r2ACGtTuP')}
+				onClick={() => {
+					open()
+				}}
 			>
 				Connect Wallet
 			</Button>
