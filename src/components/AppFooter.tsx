@@ -18,9 +18,9 @@ const AppFooter = () => {
 	return (
 		<Box sx={styles.wrap}>
 			<Typography variant="caption">
-				&copy;{new Date().getFullYear()}&nbsp;|&nbsp;made with ♡ by{' '}
-				<Link href="https://dco.dev" target="_blank" underline="always" color="inherit">
-					dco
+				&copy;{new Date().getFullYear()}&nbsp;|&nbsp;made by{' '}
+				<Link href="https://faysalbadaoui.com" target="_blank" underline="always" color="inherit">
+					Faysal Badaoui Mahdad
 				</Link>
 			</Typography>
 		</Box>

@@ -25,7 +25,7 @@ const ConnectWalletButton = (): JSX.Element => {
 			<Button
 				id="connect-wallet-button"
 				variant="contained"
-				color="primary"
+				color="secondary"
 				size="small"
 				sx={styles.button}
 				onClick={() => {

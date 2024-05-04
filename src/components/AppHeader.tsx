@@ -55,7 +55,7 @@ const styles = {
 
 const AppHeader = () => {
 	// App Title
-	const dappTitleText = 'WEB3DAPP'
+	const dappTitleText = 'IGTokenizer'
 
 	// Navigation Pages
 	const pages = [
