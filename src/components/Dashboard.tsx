@@ -36,8 +36,8 @@ const Dashboard: React.FC = () => {
 			const [result, hash] = await executeContractWrite({
 				address: nft.address,
 				abi: nft.abi,
-				functionName: 'mint',
-				args: ['exampleTokenURI'],
+				functionName: 'generateTokenId',
+				args: ['C55-yFLN5HM'],
 			})
 
 			console.log({ result, hash })

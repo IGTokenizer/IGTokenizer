@@ -19,7 +19,7 @@ import { infuraProvider } from 'wagmi/providers/infura'
 import { publicProvider } from 'wagmi/providers/public'
 
 // WalletConnect options
-const projectId = `${process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID}`
+const projectId = `${process.env.NEXT_PUBLIC_WC_PROJECT_ID}`
 const metadata = {
 	name: 'Next DApp',
 	description: 'A simple boilerplate app template for building web3 applications.',
@@ -31,7 +31,6 @@ export const { chains, publicClient, webSocketPublicClient } = configureChains(
 	// Support several networks
 	[mainnet, polygon, arbitrum, optimism, sepolia, polygonMumbai, arbitrumSepolia, optimismSepolia],
 
-	// Prefer Alchemy, then Infura, then fallback
 	[
 		infuraProvider({ apiKey: `${process.env.NEXT_PUBLIC_INFURA_RPC_KEY}` }),
 		alchemyProvider({ apiKey: `${process.env.NEXT_PUBLIC_ALCHEMY_RPC_KEY}` }),
@@ -39,7 +38,6 @@ export const { chains, publicClient, webSocketPublicClient } = configureChains(
 	],
 )
 
-// Setup wallet connectors with many options
 const connectors: Connector[] = [
 	new WalletConnectConnector({
 		chains,
@@ -54,12 +52,6 @@ const connectors: Connector[] = [
 		options: {
 			name: 'Browser Wallet',
 			shimDisconnect: true,
-		},
-	}),
-	new LedgerConnector({
-		chains,
-		options: {
-			projectId: `${process.env.NEXT_PUBLIC_LEDGER_PROJECT_ID}`,
 		},
 	}),
 	new CoinbaseWalletConnector({ chains, options: { appName: metadata.name } }),
