@@ -28,13 +28,11 @@ const PrimaryLayout = ({ children }: { children: React.ReactNode }): React.React
 
 	return (
 		<>
-			{/* Header/Body/Footer */}
 			<AppHeader />
 			<Box component="main" sx={styles.main}>
 				<Container maxWidth="xl">{children}</Container>
 			</Box>
 			<AppFooter />
-			{/* Tx Notifications */}
 			<Snackbar
 				open={!!txSuccess}
 				autoHideDuration={NOTIFICATION_TIMEOUT}

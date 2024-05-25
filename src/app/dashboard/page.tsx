@@ -3,9 +3,9 @@ import type { Metadata } from 'next'
 import Dashboard from '@/components/Dashboard'
 
 export const metadata: Metadata = {
-	title: 'Next DApp',
+	title: 'IGTokenizer dApp',
 	description:
-		'A template for building Ethereum-based dApps using Next.js, Material UI, Wagmi/Viem, and WalletConnect.',
+		'IGTokenizer is a decentralized application (dApp) that allows you to tokenize your Instagram posts as NFTs.',
 }
 
 const DashboardPage = () => {
