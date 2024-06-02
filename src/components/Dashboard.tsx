@@ -28,6 +28,7 @@ const Dashboard: React.FC = () => {
 	const [stepProcess, setStepProcess] = useState<number>(0)
 	const [stepProcessText, setStepProcessText] = useState<string>('')
 	const [metadataNFT, setMetadataNFT] = useState<string>('')
+	const [nftId, setNFTId] = useState<string>('')
 	// Hooks
 	const { nft, executeContractRead, executeContractWrite } = useContract()
 	const { address, isConnected } = useAccount()
@@ -50,8 +51,11 @@ const Dashboard: React.FC = () => {
 			console.log({ result, hash })
 			if (result && (result as any[]).length > 0) {
 				const vHash = (result as any[])[0]
+				const postId = (result as any[])[1]
 				console.log('First value of result:', vHash)
+				const link = `https://testnets.opensea.io/es/assets/sepolia/0x4333175bbe1de72298663670cf6e4945614cc62a/${postId}`
 				setVerificationHash(vHash.toString())
+				setNFTId(link)
 			}
 		} catch (e) {
 			console.error(e)
@@ -203,6 +207,12 @@ const Dashboard: React.FC = () => {
 					<>
 						<Typography variant="h6">
 							NFT Image and Metadata generated and uploaded to IPFS. Now you can mint the NFT.
+						</Typography>
+						<Typography variant="h6">
+							If you did everything correctly, you should see the NFT in your OpenSea account after minting.
+						</Typography>
+						<Typography variant="h6">
+							Your NFT will be viewed from here: <a href={nftId}>NFT</a>
 						</Typography>
 						<Button onClick={handleMintNFT} variant="contained" sx={styles.button}>
 							Mint NFT
