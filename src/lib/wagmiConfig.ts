@@ -21,9 +21,9 @@ import { publicProvider } from 'wagmi/providers/public'
 // WalletConnect options
 const projectId = `${process.env.NEXT_PUBLIC_WC_PROJECT_ID}`
 const metadata = {
-	name: 'Next DApp',
-	description: 'A simple boilerplate app template for building web3 applications.',
-	url: 'https://dco.dev',
+	name: 'IGTokenizer',
+	description: 'A dApp made to tokenize Instagram posts',
+	url: 'https://faysalbadaoui.com',
 	icons: ['https://avatars.githubusercontent.com/u/37784886'],
 }
 
