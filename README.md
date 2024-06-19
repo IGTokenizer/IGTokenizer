@@ -1,8 +1,5 @@
-# Nextjs Web3 Template
+# IGTokenizer Main Website
 
-View the [demo app](https://template.dco.dev/).
-
-This is a template for building a robust frontend application designed to interact with Ethereum-based smart contracts.
 
 It uses the following features:
 
